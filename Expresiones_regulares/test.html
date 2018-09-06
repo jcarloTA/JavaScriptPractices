@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+
+    <script>
+        const cadena = "Esta es una prueba para profesorasp de programacion"
+        const er1 = new RegExp('^(\balumn[oa]{2,4}*s?\b|\bprofesor(as?|es)?\b)', 'i');
+        const er2 = /(\balumn[oa]{2,4}*s?\b|\bprofesor(as?|es)?p\b)/i;
+        
+        /*
+        METACARACTERES: comodin.
+        -SUSTITUCION: Los que definen que esperamos en un determinado lugar (del patron)
+        . (punto) --> acepta cualquier simbolo/caracter
+        [ao] --> es un listado de caracteres validos  en ese lugar del patron.
+        [a-e] --> si entre corchetes tenes un guion entre dos simbolos, es un rango. Acendesnte. a-z
+        [a-eop] --> se permite la mezcla entre rangos y opciones.
+        (palabra|otra|otramas|unaultima)
+
+        -ATAJOS \ 
+        \w --> representa cualquier caracter alfanumerico [a-z A-Z 0-9 _]
+        \d --> representa solo digitos [0-9]
+        \s --> representa cualquier signo de espacio (barra espaciadora, tab,enter )
+        \b --> representa cualquier delimitador de palabra (signo de puntuacion que represente un cambio de palabra puntos, coma, comillas, parentesis)
+        
+        \W --> negacion de cualquier caracter alfanumerico NO sea a-zA-Z0-9_
+        \S --> negacion de espacios     
+
+        -CANTIDAD: definir cuantas veces aparece ese caracter
+         * --> lo que esta antes del asterisco (punto,corchete,los parentesis, caracter estatic)
+         ? --> lo que esta antes del signo no puede estar, pero si aparese es UNA SOLA VEZ.
+         + --> lo que esta antes del signo tiene que estar una vez como minimo ( se puede repetir )
+         {num} --> lo que esta antes tiene que aparecer esa cantidad de veces
+         {num,otro_num} --> lo que esta antes tiene que aparecer entre esas cantidades (ambas inclusives)
+         {num,}-->estamos definiendo un minomo, pero no un maximo , tiene que aprecer desde esa cantidad de veces.
+        
+        -DEMILITADORES DE INICIO O FIN DE ER;
+        ^ --> indica que antes de eso no puede haber nada...
+        $ --> indica que despues de ese simbolo  no puede haber nada...
+
+        */ 
+        let archivo = 'foto001';
+
+        let er3 = /foto00[0-9]/;
+        
+        let res = er2.test(cadena)
+        alert(res)
+    </script>
+</body>
+</html>

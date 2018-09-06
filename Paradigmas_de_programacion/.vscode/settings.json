@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 25,
+    "editor.letterSpacing": 0.5,
+    "editor.fontWeight": "700",
+    "editor.cursorWidth": 5,
+    "editor.cursorBlinking": "solid",
+}
